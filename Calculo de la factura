@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main(){
+	float monto,IVA=0.13,impuesto;
+	cout<<"Ingrese el Monto de la factura: ";
+	cin>>monto;
+	impuesto=monto*IVA;
+	cout<<"El impuesto a pagar es: "<<impuesto;
+	getch();
+}
