@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main() {
+	float is,n,t,c;
+	cout<<"Ingrese el capital: ";
+	cin>>c;
+	cout<<"Ingrese el numero de años: ";
+	cin>>n;
+	cout<<"Ingrese la tasa de interes: ";
+	cin>>t;
+	is=c*n*t;
+	cout<<"El interes simple es: "<<is;
+	getch();
+}
