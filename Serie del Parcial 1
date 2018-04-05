@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main(){
+	float k=1,i=1,n,c,s=0;
+	cout<<"Ingrese el numero de terminos para la serie";
+	cin>>n;
+	cout<<"Ingrese la base para la serie";
+	cin>>c;
+	while(i<=n){
+		cout<<pow(c,i);
+		if(k>0)
+			s=s+pow(c,i);
+		else
+			s=s-pow(c,i);
+		k=k*(-1);
+		i=i+1;
+	}
+	cout<<"La Sumatoria de la serie es: "<<s;
+	getch()
