@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+float suma(float b,float n);
+void mostrar(float v[],float n);
+
+void main()
+{
+	float b,n,v[MAX];
+	cout<<"Ingrese la base de la serie: ";
+	cin>>b;
+	cout<<"Ingrese la cantidad de terminos de la serie: ";
+	cin>>n;
+	mostrar(v,n);
+	getch();
+}
+void suma(float b,float n,float v[])
+{
+	float s=0,k=1;
+	for(int i=1;i<=n;i++)
+	{
+		if(k>0)
+			s=s+pow(b,i);
+		else
+			s=s-pow(b,i);
+		k=k*(-1);
+		v[i]=s;
+	}
+
+}
+
+void mostrar(float v[],float n)
+{
+	for(int i=0;i<n;i++)
+		cout<<"V["<<i<<"]= "<<v[i]<<endl;
+}
